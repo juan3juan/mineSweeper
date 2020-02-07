@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./style.scss";
+import Board from "./component/Board";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const height = 8;
+  const width = 8;
+  const mines = 10;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="game">
+      <Board height={height} width={width} mines={mines} />
     </div>
   );
 }
